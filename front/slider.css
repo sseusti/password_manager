@@ -1,0 +1,45 @@
+ .range_box {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px 0;
+     /* background-color: #E4EBF1; */
+     border-radius: 6px;
+     box-sizing: border-box;
+     width: 413px;
+     height: 40px;
+ }
+
+ .range {
+     width: 400px;
+     height: 20px;
+     appearance: none;
+     background: #6E808E;
+     outline: none;
+     border-radius: 6px;
+     overflow: hidden;
+ }
+
+ .range::-webkit-slider-thumb {
+     appearance: none;
+     width: 20px;
+     height: 20px;
+     background: #EFF2F9;
+     border-radius: 6px;
+     border: 2px solid #B5C0C6;
+     box-shadow: -407px 0 0 400px #B5C0C6;
+     cursor: pointer;
+ }
+
+ .rangeValue {
+     position: relative;
+     text-align: center;
+     width: 60px;
+     /* font-size: 1.25em; */
+     color: #6E808E;
+     background: #E4EBF1;
+     margin-left: 15px;
+     border-radius: 6px;
+     font-weight: 500;
+ }

@@ -3,35 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Password Manager</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./slider.css">
 </head>
 
 <body>
-    <div>
-        <div>
-            <label class="fields">
-                <span>Название сайта</span>
-                <input type="text" placeholder="website">
-            </label>
-            <label class="fields">
-                <span>Логин/Юзернейм</span>
-                <input type="text">
-            </label>
-            <label class="fields">
-                <span>Пароль</span>
-                <input id="password_input" type="text" value="password">
-            </label>
+    <header class="header">
+        <a class="header-item" href="#"><img class="header-item-image" src="./static/gear_white.svg" alt=""></a>
+    </header>
+    <main class="main">
+        <h1 class="main-title">Запомнить аккаунт</h1>
+        <label class="main-field" for="name">
+            <h2 class="field-title">Название</h2>
+            <input class="field-input" type="text" id="name" placeholder="Новый пароль">
+        </label>
+        <label class="main-field" for="login">
+            <h2 class="field-title">Логин/Email</h2>
+            <input class="field-input" type="text" id="login" placeholder="new_login">
+        </label>
+        <label class="main-field" for="password">
+            <h2 class="field-title">Пароль</h2>
+            <input class="field-input" type="text" id="password">
+            <button class="password-button"><img src="./static/dice_white.svg" alt=""></button>
+        </label>
+        <label class="main-field" for="len">
+            <h2 class="field-title">Длина</h2>
+            <div class="range_box">
+                <input type="range" class="range" value="12" min="8" max="24">
+                <span class="rangeValue">12</span>
+                <script src="slider.js"></script>
+            </div>
+        </label>
+        <label class="main-field" for="aditionally">
+            <h2 class="field-title">Дополнительно</h2>
+            <input class="field-input" type="aditionally" id="aditionally" placeholder="Добавить">
+        </label>
+        <div class="buttons">
+            <button class="button"><img style="padding-right: 15px;" src="./static/save_white.png" alt="">Сохранить</button>
+            <button class="button"><img style="padding-right: 25px;" src="./static/search_white.svg" alt="">Найти</button>
         </div>
-        <div class="button">
-            <button type="button">Сохранить</button>
-            <button type="button" onclick="generatePassword()">Сгенерировать пароль</button>
-            <button type="button">Найти данные</button>
-        </div>
-    </div>
-    <script src="/eel.js"></script>
-    <script src="./script.js"></script>
+    </main>
 </body>
 
 </html>

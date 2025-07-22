@@ -1,14 +1,123 @@
 body {
+    margin: 10px;
+    width: 800px;
+    min-height: 600px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: #6E808E;
+}
+
+.header {
+    height: 80px;
+    background-color: #B5C0C6;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 13px;
+    font-weight: medium;
+}
+
+.header-item {
+    background-color: #6E808E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    width: 52px;
+}
+
+.header-item-image {
+    width: 27px;
+    height: 27px;
+}
+
+.main {
+    background-color: #EFF2F9;
+    padding: 35px 80px;
+    position: relative;
+}
+
+.main-title {
+    font-size: 52px;
+    padding: 0 0 20px;
+}
+
+.main-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin: 0 0 20px;
+}
+
+.field-title {
+    width: 187px;
+    margin: 0 40px 0 0;
+    display: flex;
+    justify-content: end;
+}
+
+.field-input {
+    background-color: #E4EBF1;
+    width: 413px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding-left: 8px;
+    font-weight: normal;
+    height: 40px;
+    color: #6E808E;
+}
+
+.field-input::placeholder {
+    font-weight: normal;
+    height: 40px;
+    font-size: 20px;
+    color: #B5C0C6;
+}
+
+.field-input::
+
+#password {
+    position: relative;
+}
+
+.password-button {
+    position: absolute;
+    z-index: 1;
+    right: 80px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #B5BFC6;
+    cursor: pointer;
+}
+
+.range-input {
     width: 300px;
 }
 
-.fields {
+.buttons {
     display: flex;
-    justify-content: space-between;
-    margin: 0 0 10px;
+    justify-content: center;
 }
 
 .button {
+    width: 180px;
+    height: 40px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 16px 0 6px; */
+    margin: 30px 20px 56px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #6E808E;
+    background-color: #B5C0C6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
