@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Password Manager</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div>
-        
+        <div>
+            <label class="fields">
+                <span>Название сайта</span>
+                <input type="text" placeholder="website">
+            </label>
+            <label class="fields">
+                <span>Логин/Юзернейм</span>
+                <input type="text">
+            </label>
+            <label class="fields">
+                <span>Пароль</span>
+                <input id="password_input" type="text" value="password">
+            </label>
+        </div>
+        <div class="button">
+            <button type="button">Сохранить</button>
+            <button type="button" onclick="generatePassword()">Сгенерировать пароль</button>
+            <button type="button">Найти данные</button>
+        </div>
     </div>
+    <script src="/eel.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
