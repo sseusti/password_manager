@@ -134,3 +134,53 @@ body {
     box-shadow: inset -5px -5px 10px #FAFBFF;
     box-shadow:  inset 5px 5px 10px rgba(22, 27, 29, 0.23);
 }
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #E4EBF1;
+    padding: 20px;
+    border-radius: 6px;
+    min-width: 200px;
+    max-width: 400px;
+    text-align: left;
+    position: relative;
+}
+
+#popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1001;
+    user-select: none;
+}
+
+#popup-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 300px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+

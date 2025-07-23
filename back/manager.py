@@ -25,15 +25,23 @@ def save_account(url, login, password, info=''):
         'password': password,
         'info': info,
     }
-    try:
-        with open('./passwords.json', 'r', encoding='utf-8') as file:
-            data = json.load(file)
-    except FileNotFoundError:
-        data = {}
+    if url != '' and password != '':
+        try:
+            with open('./passwords.json', 'r', encoding='utf-8') as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            data = {}
     
-    data[url] = new_account
-    with open('./passwords.json', 'w', encoding='utf-8') as file:
-        json.dump(data, file, indent=4)
+        data[url] = new_account
+        with open('./passwords.json', 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
+            
+        message = 'Aккаунт сохранен' 
+    
+    else:
+        message = 'Аккаунт не сохранен: \nполя "Название" и "Пароль" обязательны для заполнения '   
+        
+    return message
         
 @eel.expose
 def get_account(url):
@@ -41,13 +49,13 @@ def get_account(url):
         data = json.load(file)
         
     try:
-        print(data[url])
-        return data[url]
+        account = data[url]
+        message = (f'Название сайта: {url} \n'
+                   f'Логин: {account["login"]} \n'
+                   f'Пароль: {account["password"]} \n'
+                   f'Дополнительно: {account["info"]}')
     except KeyError:
-        print({})
-        return {}
+        message = 'Аккаунт не найден'
+    
+    return message
         
-save_account('qwe', 'aaa', '123')
-save_account('asd', '123', '12564563')
-get_account('qwe')
-get_account('zxc')
