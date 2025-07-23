@@ -17,7 +17,7 @@
         <h1 class="main-title">Запомнить аккаунт</h1>
         <label class="main-field" for="name">
             <h2 class="field-title">Название</h2>
-            <input class="field-input" type="text" id="name" placeholder="Новый пароль">
+            <input class="field-input" type="text" id="url" placeholder="Новый пароль">
         </label>
         <label class="main-field" for="login">
             <h2 class="field-title">Логин/Email</h2>
@@ -26,25 +26,27 @@
         <label class="main-field" for="password">
             <h2 class="field-title">Пароль</h2>
             <input class="field-input" type="text" id="password">
-            <button class="password-button"><img src="./static/dice_white.svg" alt=""></button>
+            <button class="password-button" id="generateButton"><img src="./static/dice_white.svg" alt=""></button>
         </label>
         <label class="main-field" for="len">
             <h2 class="field-title">Длина</h2>
             <div class="range_box">
-                <input type="range" class="range" value="12" min="8" max="24">
+                <input id="passwordLength" type="range" class="range" value="12" min="8" max="24">
                 <span class="rangeValue">12</span>
                 <script src="slider.js"></script>
             </div>
         </label>
         <label class="main-field" for="aditionally">
             <h2 class="field-title">Дополнительно</h2>
-            <input class="field-input" type="aditionally" id="aditionally" placeholder="Добавить">
+            <input class="field-input" type="aditionally" id="info" placeholder="Добавить">
         </label>
         <div class="buttons">
-            <button class="button"><img style="padding-right: 15px;" src="./static/save_white.png" alt="">Сохранить</button>
-            <button class="button"><img style="padding-right: 25px;" src="./static/search_white.svg" alt="">Найти</button>
+            <button class="button" id="saveButton"><img style="padding-right: 15px;" src="./static/save_white.png" alt="">Сохранить</button>
+            <button class="button" id="loadButton"><img style="padding-right: 25px;" src="./static/search_white.svg" alt="">Найти</button>
         </div>
     </main>
+    <script src="/eel.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 body {
-    margin: 10px;
     width: 800px;
     min-height: 600px;
     border: 1px solid black;
@@ -79,7 +78,10 @@ body {
     color: #B5C0C6;
 }
 
-.field-input::
+.field-input:focus {
+    outline: none;
+    outline: 2px solid #6E808E;
+}
 
 #password {
     position: relative;
@@ -95,6 +97,8 @@ body {
     border-radius: 6px;
     background-color: #B5BFC6;
     cursor: pointer;
+    box-shadow: -5px -5px 10px #FAFBFF;
+    box-shadow: 5px 5px 10px rgba(22, 27, 29, 0.23);
 }
 
 .range-input {
@@ -120,4 +124,13 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+
+    box-shadow: -5px -5px 10px #FAFBFF;
+    box-shadow: 5px 5px 10px rgba(22, 27, 29, 0.23);
+}
+
+.button:active, .password-button:active {
+    box-shadow: none;
+    box-shadow: inset -5px -5px 10px #FAFBFF;
+    box-shadow:  inset 5px 5px 10px rgba(22, 27, 29, 0.23);
 }
